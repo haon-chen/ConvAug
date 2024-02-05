@@ -20,7 +20,7 @@ To ensure anonymity, we will cite the source of some codes later.
 ```
 ./run_scripts/generate_data/paraphrase.sh
 ```
-- For QReCC:
+### QReCC:
 - Train
 ```
 ./run_scripts/train_cdr/qrecc-conv_ance_aug.sh
@@ -29,7 +29,7 @@ To ensure anonymity, we will cite the source of some codes later.
 ```
 ./run_scripts/dense_retrieval/qrecc-conv_ance-concat_aug.sh
 ```
-- For TopiOCQA:
+### TopiOCQA:
 - Train
 ```
 ./run_scripts/train_cdr/topiocqa-conv_ance_aug.sh
@@ -38,12 +38,12 @@ To ensure anonymity, we will cite the source of some codes later.
 ```
 ./run_scripts/dense_retrieval/topiocqa-conv_ance-concat.sh
 ```
-- For CAsT-20:
+### CAsT-20:
 - Test
 ```
 ./run_scripts/dense_retrieval/cast20-conv_ance-concat.sh
 ```
-- For CAsT-21:
+### CAsT-21:
 - Test
 ```
 ./run_scripts/dense_retrieval/cast21-conv_ance-concat.sh
