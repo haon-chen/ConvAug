@@ -173,7 +173,7 @@ def main():
                 history.append(turn['response'])
                 continue
             prompt += "\nStep 1: Comprehension Synthesis:\n"
-            prompt += "[Your cognitive mapping output here]\n"
+            prompt += "[Identify key themes and intents of the conversation]\n"
             prompt += "Step 2: Associative Expansion:\n"
             prompt += "[Your associative diversification output here]\n"
             prompt += "Step 3: Conclusion:\n"

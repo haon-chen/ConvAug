@@ -1,6 +1,6 @@
-# GOLD
+# ConvAug
 
-This anonymous repository contains the source code for the ARR submission "Generalizing Conversational Context Encoder via LLM-Cognition Data Augmentation".
+This anonymous repository contains the source code for the ARR submission "Generalizing Conversational Dense Retrieval via LLM-Cognition Data Augmentation".
 
 To ensure anonymity, we will cite the source of some codes later.
 
