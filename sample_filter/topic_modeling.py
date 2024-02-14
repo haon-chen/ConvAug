@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer as SBert, util
 from bertopic import BERTopic
 
 sentence_model = SBert('all-MiniLM-L6-v2')
-model_dir = "/BERTopic_Wikipedia/"
+model_dir = "MaartenGr/BERTopic_Wikipedia"
 topic_model = BERTopic.load(model_dir)
 
 def calculate_confidence(probs, exclude_indices=[]):

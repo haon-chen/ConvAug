@@ -67,7 +67,7 @@ class ANCE(RobertaForSequenceClassification):
     def forward(self, input_ids, attention_mask, wrap_pooler=False):
         return self.query_emb(input_ids, attention_mask)
     
-    def forward_for_pretraining(self, input_ids, attention_mask, wrap_pooler=False):
+    def forward_for_CL(self, input_ids, attention_mask, wrap_pooler=False):
         outputs1 = self.roberta(input_ids=input_ids,
                                 attention_mask=attention_mask)
         outputs1 = outputs1.last_hidden_state
@@ -81,13 +81,13 @@ class ANCE(RobertaForSequenceClassification):
         input_ids1 = aug_input_encodings1["input_ids"]
         attention_mask1 = aug_input_encodings1["attention_mask"]
         bert_inputs1 = {'input_ids': input_ids1, 'attention_mask': attention_mask1}
-        outputs1 = self.forward_for_pretraining(**bert_inputs1)
+        outputs1 = self.forward_for_CL(**bert_inputs1)
         sent_rep1 = outputs1
 
         input_ids2 = aug_input_encodings2["input_ids"]
         attention_mask2 = aug_input_encodings2["attention_mask"]
         bert_inputs2 = {'input_ids': input_ids2, 'attention_mask': attention_mask2}
-        outputs2 = self.forward_for_pretraining(**bert_inputs2)
+        outputs2 = self.forward_for_CL(**bert_inputs2)
         sent_rep2 = outputs2
         batch_size = sent_rep1.size(0)
 
@@ -116,7 +116,7 @@ class ANCE(RobertaForSequenceClassification):
             neg_attention_mask = neg_aug_input_encodings["attention_mask"]
             neg_ratio = int(neg_input_ids.shape[0] / input_ids1.shape[0])
             neg_bert_inputs = {'input_ids': neg_input_ids, 'attention_mask': neg_attention_mask}
-            neg_sent_rep = self.forward_for_pretraining(**neg_bert_inputs)
+            neg_sent_rep = self.forward_for_CL(**neg_bert_inputs)
             neg_sent_rep = neg_sent_rep.view(batch_size, neg_ratio, -1)
                         
             neg_sent_norm = neg_sent_rep.norm(dim=-1, keepdim=True)

@@ -46,7 +46,6 @@ class MyLLM:
         
         self.prompt_exceed_max_length = 0
         self.fewer_than_50 = 0
-        self.azure_filter_fail = 0
 
 
     def generate(self, prompt, max_tokens, stop=None, batching = False):
@@ -87,7 +86,6 @@ def main():
     parser.add_argument("--tag", type=str, help="Tag of run (for saving)")
     parser.add_argument("--model", type=str, help="Model to use")
     parser.add_argument("--openai_api", type=bool, default=False, help="Whether to use OpenAI API")
-    parser.add_argument("--baidu", type=bool, default=False, help="Whether to use OpenAI API")
 
     # Decoding
     parser.add_argument("--temperature", type=float, default=0.5, help="Temperature for decoding")
@@ -175,11 +173,10 @@ def main():
             prompt += "\nStep 1: Comprehension Synthesis:\n"
             prompt += "[Identify key themes and intents of the conversation]\n"
             prompt += "Step 2: Associative Expansion:\n"
-            prompt += "[Your associative diversification output here]\n"
+            prompt += "[Generate alternative expressions based on existing ones]\n"
             prompt += "Step 3: Conclusion:\n"
             prompt += "Paraphrased Conversation:\n"
-            prompt += "[Your paraphrased conversation here]\n"
-            prompt += "Only output the paraphrasing process and the paraphrased conversation.\n"
+            prompt += "[Paraphrase the conversation based on outputs of the last two steps]\n"
             prompts.append(prompt)
             sample_ids.append(sample_id)
             history.append(turn['question'])

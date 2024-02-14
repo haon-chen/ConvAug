@@ -1,6 +1,5 @@
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 torchrun --nproc_per_node=4 \
---master_port 28510 \
 ./train/train_aug_cdr.py \
 --model_path="castorini/ance-msmarco-passage" \
 --dataset_path="./data/topiocqa/train_augmented.json" \

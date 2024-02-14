@@ -27,7 +27,7 @@ To ensure anonymity, we will cite the source of some codes later.
 ```
 - Test
 ```
-./run_scripts/dense_retrieval/qrecc-conv_ance-concat_aug.sh
+./run_scripts/dense_retrieval/qrecc-conv_ance-concat.sh
 ```
 ### TopiOCQA:
 - Train

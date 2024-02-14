@@ -100,7 +100,6 @@ def main():
     parser.add_argument("--tag", type=str, help="Tag of run (for saving)")
     parser.add_argument("--model", type=str, help="Model to use")
     parser.add_argument("--openai_api", type=bool, default=False, help="Whether to use OpenAI API")
-    parser.add_argument("--baidu", type=bool, default=False, help="Whether to use OpenAI API")
 
     # Decoding
     parser.add_argument("--temperature", type=float, default=0.5, help="Temperature for decoding")

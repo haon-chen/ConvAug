@@ -124,7 +124,6 @@ class ScriptArguments:
     dataset_path: str = field(metadata={"help": "the dataset name"})
     negative_ratio: int = field(metadata={"help": "the neg ratio"})
     neg_aug_ratio: int = field(metadata={"help": "the neg aug ratio"})
-    early_stop_epoch: float = field(metadata={"help": "the early stop epoch"})
     
     only_last_response: bool = field(metadata={"help": "Wether to only include the last respone or not."})
     max_seq_length: Optional[int] = field(default=512, metadata={"help": "Input sequence length"})
