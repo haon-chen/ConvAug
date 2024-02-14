@@ -93,12 +93,12 @@ def augmentation(sample_id, history, question, strategy):
         for sent in history:
             sent_aug = token_deletion(sent)
             sent_aug += " "
-            sent_aug = re.sub(r'(\[term_del\] ){2,}', "[token_mask] ", sent_aug)
+            sent_aug = re.sub(r'(\[token_mask\] ){2,}', "[token_mask] ", sent_aug)
             sent_aug = sent_aug[:-1]
             aug_sequence.append(sent_aug)
         aug_question = token_deletion(question)
         aug_question += " "
-        aug_question = re.sub(r'(\[term_del\] ){2,}', "[token_mask] ", aug_question)
+        aug_question = re.sub(r'(\[token_mask\] ){2,}', "[token_mask] ", aug_question)
         aug_question = aug_question[:-1]
     elif strategy == "reorder_depend":
         if len(history)<=2:
