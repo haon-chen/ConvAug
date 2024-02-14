@@ -164,15 +164,18 @@ for conv in tqdm(train_data):
         
         aug_ctx['shift'] = shift_data[sample_id]
             
-        # rewrite
+        
         history1 = history[:]
         history2 = history[:]
         history3 = history[:]
         question1 = question[:]
         question2 = question[:]
         question3 = question[:]
+        # token masking
         aug_ctx['token_deletion'] = augmentation(sample_id, history1, question1, 'token_deletion')
+        # dependency-aware turn masking
         aug_ctx['turn_deletion_depend'] = augmentation(sample_id, history2, question2, 'turn_deletion_depend')
+        # dependency-aware turn reordering
         aug_ctx['reorder_depend'] = augmentation(sample_id, history3, question3, 'reorder_depend')
         
         history.append(question)
