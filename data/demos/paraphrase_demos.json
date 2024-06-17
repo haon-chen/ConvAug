@@ -1,0 +1,30 @@
+[
+    {
+        "original": [
+            {
+                "turn_id": 1,
+                "question": "What time does the train leave?",
+                "response": "The train leaves at 6 PM."
+            },
+            {
+                "turn_id": 2,
+                "question": "Do I need to buy a ticket in advance?",
+                "response": "It's recommended, as seats tend to fill up quickly."
+            }
+        ],
+        "paraphrased": [
+            {
+                "turn_id": 1,
+                "question": "At what hour is the train scheduled to depart?",
+                "response": "The train's departure is set for 18:00."
+            },
+            {
+                "turn_id": 2,
+                "question": "Should I purchase a ticket beforehand?",
+                "response": "Yes, it's advisable to secure your seat early since it often gets crowded."
+            }
+        ],
+        "cognitive_mapping": "Theme - Travel logistics; Intent - Acquiring information about train schedule and ticketing.",
+        "asso_div": "Train schedule -> Queries about departure times\nTicketing -> Questions about ticket purchase requirements"
+    }
+]

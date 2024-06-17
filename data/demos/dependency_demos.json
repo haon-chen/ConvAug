@@ -1,0 +1,28 @@
+[
+    {
+        "original": [
+            {
+                "turn_id": 1,
+                "question": "What are the main attractions in Paris?",
+                "response": "The Eiffel Tower and the Louvre are among the top attractions."
+            },
+            {
+                "turn_id": 2,
+                "question": "Is the Louvre open on Sundays?",
+                "response": "Yes, it's open from 9 AM to 6 PM."
+            },
+            {
+                "turn_id": 3,
+                "question": "How can I get tickets?",
+                "response": "You can find them on internet."
+            },
+            {
+                "turn_id": 4,
+                "question": "What is the website?"
+            }
+        ],
+        "dependency": "Turn2,Turn3",
+        "cognitive_mapping": "Theme - Paris attractions and Louvre Tickets; Intent - Acquiring information about attractions and related logistics and Tickets of Louvre.",
+        "rele_assess": "Turn1: General information about attractions; not directly relevant to ticket acquisition.\tTurn2: Specific information about the Louvre; more relevant to planning a visit, potentially linked to ticketing information.\tTurn3: Specific information about online tickets; relevant to website information."
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "original": [
+            {
+                "turn_id": 1,
+                "question": "Can you recommend some good Italian restaurants in New York City?",
+                "response": "Sure, one popular option is L'Artusi in the West Village."
+            },
+            {
+                "turn_id": 2,
+                "question": "Do they offer vegetarian dishes?",
+                "response": "Yes, they have a variety of vegetarian options."
+            }
+        ],
+        "shifted": [
+            {
+                "turn_id": 1,
+                "question": "Can you suggest some places to learn Italian cooking in New York City?",
+                "response": "Certainly, one well-known place is the Culinary Institute in Lower Manhattan."
+            },
+            {
+                "turn_id": 2,
+                "question": "Do they offer classes for beginners?",
+                "response": "Yes, they have a variety of courses for beginners."
+            }
+        ],
+        "cognitive_mapping": "Theme - Italian restaurants; Intent - Seeking recommendations in New York City.",
+        "new_intent": "New Intent - Inquiring about Italian cooking classes in New York City."
+    }
+]

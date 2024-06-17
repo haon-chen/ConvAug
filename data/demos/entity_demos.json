@@ -1,0 +1,30 @@
+[
+    {
+        "original": [
+            {
+                "turn_id": 1,
+                "question": "How long is the Golden Gate Bridge?",
+                "response": "The Golden Gate Bridge is about 1.7 miles long."
+            },
+            {
+                "turn_id": 2,
+                "question": "When was it opened to the public?",
+                "response": "It was opened in May 1937."
+            }
+        ],
+        "entity_swapped": [
+            {
+                "turn_id": 1,
+                "question": "How long is the Brooklyn Bridge?",
+                "response": "The Brooklyn Bridge is about 1.1 miles long."
+            },
+            {
+                "turn_id": 2,
+                "question": "When was it opened to the public?",
+                "response": "It was opened in December 1883."
+            }
+        ],
+        "entity": "Key Entities - Golden Gate Bridge, 1.7 miles, May 1937.",
+        "substitution": "Substitute Entities - Brooklyn Bridge, 1.1 miles, December 1883."
+    }
+]
